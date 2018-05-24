@@ -1,0 +1,23 @@
+body{
+    border: 1px solid #000000;
+    border-style: dotted;
+}
+.container{
+    margin: 50px 100px 50px 50px;
+    padding-top: 50px;
+    border: 1px solid #000000;
+}
+h1{
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid #000000;
+    border-style: dotted;
+    text-align: center;
+}
+p{
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid #000000;
+    border-style: dotted;
+    text-align: left;
+}

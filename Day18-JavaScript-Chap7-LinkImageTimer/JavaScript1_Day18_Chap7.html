@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Upcase</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script language="JavaScript">
+    var $ = function(id){
+        return document.getElementById(id);
+    };
+
+    window.onload = function(){
+        var listNode = $("img_list");
+        var capNode = $("caption");
+        var imgNode = $("img_main");
+
+        //procss image links
+        var imgLinks = listNode.getElementsByTagName("a");
+        
+        var i, link, click, image;
+        for (i = 0; i < imgLinks.length; i++){
+            link = imgLinks[i];
+            image = new Image();
+            image.src = link.getAttribute("href");
+
+            //attach event handler
+            link.onclick = function(evt){
+                click = this; //'this' = the link that was clicked
+                //set new image and caption
+                imgNode.src = click.getAttribute("href");
+                capNode.innerHTML = click.getAttribute("title");
+                
+                //cancel the default action of the event
+                if (!evt){
+                    evt = window.event;}
+                if (evt.preventDefault){
+                    evt.preventDefault();
+                }else{
+                    evt.returnFalse = false;
+                }
+            };
+        }
+        //set focus on first image link
+        imgLinks[0].focus();
+    };
+</script>
+</head>
+    <body>
+        <div>
+            <h1>4 cây cầu Đà Nẵng</h1>
+            <p>Click vào mỗi ảnh để xem chi tiết</p>
+            <ul id="img_list" style="list-style-type: none; display: inline;">
+                <li><a href="img/CauRong.jpg" title="Cầu Rồng">
+                    <img src="img/CauRongThumb.png" height="100" width="100"></a></li>
+                <li><a href="img/CauTranThiLy.jpg" title="Cầu Trần Thị Lý">
+                    <img src="img/CauTranThiLyThumb.png" height="100" width="100"></a></li>
+            </ul>
+            <h2 id="caption"></h2>
+            <p><img id="img_main"></p>
+        </div>
+    </body>
+</html> 

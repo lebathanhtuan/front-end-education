@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.img-box{
+    width: 100%;
+    height: auto;
+}
+.navbar-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.nav-plus{
+    width: 100%;
+}
+.link-nav{
+    width: 20%;
+}
+.logo{
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    padding-right: 100px
+}
+.box-img{
+    text-align: center;
+}
+.try-now{
+    text-align: center;
+}
+.try-now-btn{
+    display: block;
+}
+.container-plus{
+    width: 70%;
+    margin: 0 auto;
+}
+.footer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.container-contact{
+    padding: 20px 0 150px 0;
+}
+.input-contact{
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px dashed #777777;
+}
+.input-submit{
+    width: 70px;
+    float: right;
+    background-color: #777777;
+    color: white;
+}

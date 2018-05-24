@@ -1,0 +1,31 @@
+.container-plus{
+    padding: 0 150px;
+}
+.bg-khoahoc{
+    background-color: #CA3438;
+}
+.sign-up{
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px dashed white;
+    background-color: #CA3438; 
+}
+.khoa-hoc{
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px dashed white;
+    background-color: #CA3438;
+}
+.khoa-hoc-border{
+    border: 1px dashed white;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.khoa-hoc-item{
+    padding: 5px;
+    text-align: center;
+}
+.khoa-hoc-text{
+    color: white;
+}

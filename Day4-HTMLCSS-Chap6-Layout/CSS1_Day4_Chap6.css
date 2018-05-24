@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 90%;
+    background-color: white;
+    margin: 15px auto;
+    border: 1px solid black;
+}
+h2{
+    padding: 1em;
+}
+header{
+    border-bottom: 1px solid black;
+}
+.main{
+    width: 66%;
+    height: 350px;
+    border-right: 1px solid black;
+    float: left;
+}
+.aside{
+    width: 33%;
+    float: right;
+}
+footer{
+    clear: both;
+    border-top: 1px solid black;
+}

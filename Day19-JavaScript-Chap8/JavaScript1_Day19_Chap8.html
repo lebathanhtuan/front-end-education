@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Upcase</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $("#submit").click(function(){
+            var name = $("#name").val();
+            var type = $("#type").val();
+            var pass1 = $("#pass").val();
+            var pass2 = $("#passconfirm").val();
+            var deviceType = ["","android","ios","ipad","pc","laptop"];
+            isValid = true;
+
+            if (name === ""){
+                $("#name").next().text("Tên không được để trống !");
+                isValid = false;
+            }else{
+                $("#name").next().text("");
+            }
+
+            if (deviceType.includes(type) == false){
+                $("#type").next().text("Phải lựa chọn trong các giá trị android,ios,ipad,pc,laptop");
+                isValid = false;
+            }else{
+                $("#type").next().text("");
+            }
+
+            if (pass1 === ""){
+                $("#pass").next().text("Pass không được để trống !");
+                isValid = false;
+            }else{
+                $("#pass").next().text("");
+            }
+
+            if (pass2 === ""){
+                $("#passconfirm").next().text("Pass Confirn không được để trống !");
+                isValid = false;
+            }else if(pass1 !== pass2){
+                $("#passconfirm").next().text("Pass Confirn không trùng !");
+                isValid = false;
+            }else{
+                $("#passconfirm").next().text("");
+            }
+            
+            if(isValid){
+                $("#submit").submit();
+            }
+        });
+        $("#name").focus();
+    })
+</script>
+</head>
+    <body>
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" id="name">
+            <span style="color: red">*</span><br>
+            <label for="type">Device Type: ["Android", "iOS"]</label>
+            <input type="text" id="type">
+            <span style="color: red">android,ios,ipad,pc,laptop</span><br>
+            <label for="pass">Password: </label>
+            <input type="password" id="pass">
+            <span style="color: red">*</span><br>
+            <label for="passconfirm">Password confirm: </label>
+            <input type="password" id="passconfirm">
+            <span style="color: red">*</span><br>
+            <input type="button" id="submit" value="Đăng ký">
+        </form>
+    </body>
+</html> 

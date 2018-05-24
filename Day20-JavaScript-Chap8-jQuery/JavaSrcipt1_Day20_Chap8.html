@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Upcase</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $("#main h2").click(function(evt){
+            $(this).toggleClass("NoiDung");
+            if($(this).attr("class") == "NoiDung"){
+                $(this).next().hide();
+            }else{
+                $(this).next().show();
+            }
+            evt.preventDefault();
+        });//end click
+        $("#main").find("a:first").focus();
+    })
+</script>
+</head>
+    <body>
+        <div id="main">
+            <h1>Header</h1>
+            <h2><a href="#">Tiêu đề 1</a></h2>
+            <div>
+                <p>Nội dung 1</p>
+            </div>
+            <h2><a href="#">Tiêu đề 2</a></h2>
+            <div>
+                <p>Nội dung 2</p>
+                <ol>
+                    <li>ABC</li>
+                    <li>DEF</li>
+                    <li>XYZ</li>
+                </ol>
+            </div>
+            <h2><a href="#">Tiêu đề 3</a></h2>
+            <div>
+                <p>Nội dung 3</p>
+            </div>
+        </div>
+    </body>
+</html> 

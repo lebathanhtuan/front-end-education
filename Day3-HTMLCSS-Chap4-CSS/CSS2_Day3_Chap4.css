@@ -1,0 +1,27 @@
+body{
+    padding: 1px;
+    margin: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h5{
+    text-align: right;
+}
+img{
+    float: left;
+    margin-left: 1px;
+}
+header{
+    text-align: center;
+}
+header h1{
+    font-size: 220%;
+    color: #f4a742;
+    text-shadow: 2px 2px 4px #000000;
+}
+header h3{
+    color: green;
+    font-size: 130%;
+}
+.green{
+    color: green;
+}

@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Upcase</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script language="JavaScript">
+    function addHTML(){
+        var container = document.getElementById("container");
+        while(container.firstChild){
+            container.removeChild(container.firstChild);
+        }
+        var div = document.createElement("div");
+        var h1 = document.createElement("h1");
+        var html = document.createTextNode("HTML là gì ?");
+        var p = document.createElement("p");
+        var content = document.createTextNode("HTML là một ngôn ngữ đánh dấu được thiết kế ra để tạo nên các trang web với các mẩu thông tin được trình bày trên World Wide Web. Cùng với CSS và JavaScript, HTML tạo ra bộ ba nền tảng kỹ thuật cho World Wide Web.");
+        container.appendChild(div);
+        div.appendChild(h1);
+        div.appendChild(p);
+        h1.appendChild(html);
+        p.appendChild(content);
+    }
+    function addCSS(){
+        var container = document.getElementById("container");
+        while(container.firstChild){
+            container.removeChild(container.firstChild);
+        }
+        var div = document.createElement("div");
+        var h1 = document.createElement("h1");
+        var html = document.createTextNode("CSS là gì?");
+        var p = document.createElement("p");
+        var content = document.createTextNode("CSS được dùng để miêu tả cách trình bày các tài liệu viết bằng ngôn ngữ HTML và XHTML.");
+        container.appendChild(div);
+        div.appendChild(h1);
+        div.appendChild(p);
+        h1.appendChild(html);
+        p.appendChild(content);
+    }
+    function addJS(){
+        var container = document.getElementById("container");
+        while(container.firstChild){
+            container.removeChild(container.firstChild);
+        }
+        var div = document.createElement("div");
+        var h1 = document.createElement("h1");
+        var html = document.createTextNode("JS là gì?");
+        var p = document.createElement("p");
+        var content = document.createTextNode("JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu.");
+        container.appendChild(div);
+        div.appendChild(h1);
+        div.appendChild(p);
+        h1.appendChild(html);
+        p.appendChild(content);
+    }
+</script>
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" style="background-color: rgb(221, 221, 221)">
+                    <ul>
+                        <li><a id="html" onclick="addHTML()">1. HTML</a></li>
+                        <li><a id="css" onclick="addCSS()">2. CSS</a></li>
+                        <li><a id="js" onclick="addJS()">3. JS</a></li>
+                    </ul>
+                </div>
+                <div id="container" class="col-md-8" style="text-align: center;">
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
